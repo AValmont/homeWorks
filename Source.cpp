@@ -10,15 +10,12 @@ int main()
     
     std::cout << "Введите число:" << std::endl;
     std::cin >> num;
-    std::cout << "Вы ввели:" <<std::endl;
-    std::cout << num << std::endl;
+    std::cout << "Вы ввели: " << num << std::endl;
 
     std::cout << "Введите слово:" << std::endl;
     std::string new_word;
     std::cin >> new_word;
-    std::cout << "Вы ввели: " << std::endl;
-    std::cout << new_word << std::endl;
+    std::cout << "Вы ввели: " << new_word << std::endl;
     
     return EXIT_SUCCESS;
 }
-
