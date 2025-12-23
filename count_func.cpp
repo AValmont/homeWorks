@@ -2,7 +2,6 @@
 #include <windows.h>
 #include <string>
 
-int count{ 1 };
 void counting_function();
 
 int main(int argc, char** argv)
@@ -10,7 +9,7 @@ int main(int argc, char** argv)
 
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-
+    
     for (int i = 0; i < 15; i++)
     {
         counting_function();
@@ -19,6 +18,7 @@ int main(int argc, char** argv)
 
 void counting_function()
 {
+    static int count{ 1 };
     std::cout << "Количество вызовов функции counting_function(): " + std::to_string(count) << std::endl;
     count++;
 }
