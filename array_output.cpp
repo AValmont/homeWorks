@@ -1,8 +1,8 @@
 #include <iostream>
 #include <array>
+#include <span>
 
-template <size_t quant>
-void print(std::array<int, quant> arr);
+void print(std::span<int> data);
 
 int main()
 {
@@ -17,11 +17,11 @@ int main()
 	return 0;
 }
 
-template <size_t quant>
-void print(std::array<int, quant> arr)
+void print(std::span<int> data)
 {
-	for (int i{ 0 }; i < arr.size();i++)
-		std::cout << arr.at(i) << " ";
+	for (int i{ 0 }; i < data.size();i++)
+		std::cout << data[i] << " ";
 
 	std::cout << "\n";
 }
+
